@@ -1,0 +1,21 @@
+<p>home works!</p>
+
+
+<h4>Região</h4>
+<mat-form-field appearance="fill">
+    <mat-label>Região</mat-label>
+    <mat-select [(value)]="selected" required>
+      <mat-option value="CNTR">Centro</mat-option>
+      <mat-option value="LEST">Zona Leste</mat-option>
+      <mat-option value="OEST">Zona Oeste</mat-option>
+      <mat-option value="NORT">Zona Norte</mat-option>
+      <mat-option value="SUL">Zona Sul</mat-option>
+      <mat-option value="RUR1">Zona Rural 1</mat-option>
+      <mat-option value="RUR2">Zona Rural 2</mat-option>
+      <mat-option value="RUR3">Zona Rural 3</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <p>You selected: {{selected}}</p>
+
+  
