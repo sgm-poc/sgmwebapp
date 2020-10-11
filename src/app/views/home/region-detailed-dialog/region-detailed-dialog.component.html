@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>Detalhes</h1>
+<div mat-dialog-content>
+  
+  <mat-card class="region-card">
+    <mat-card-header>
+        <mat-card-title>{{regionTaxes.region.name}}</mat-card-title>
+        <mat-card-subtitle>{{regionTaxes.region.code}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            <span>Nome: {{regionTaxes.region.name}}</span>
+        </p>
+        <p>
+            <span>Código: {{regionTaxes.region.code}}</span>
+        </p>
+        <p>
+            <span>População: {{regionTaxes.region.population}}</span>
+        </p>
+        <h2>
+            Impostos
+        </h2>
+        <p>
+            <span>Total: {{regionTaxes.taxes.amount}}</span>
+        </p>        
+        <p>
+            <span>Tipo: {{regionTaxes.taxes.type}}</span>
+        </p>
+    </mat-card-content>
+</mat-card>
+</div>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

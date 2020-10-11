@@ -7,19 +7,39 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './views/home/home.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
-
+import { HeaderComponent } from './views/home/header/header.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
+import { RegionListComponent } from './views/home/region-list/region-list.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatButtonModule} from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
+import {MatDialogModule} from '@angular/material/dialog';
+import { RegionDetailedDialogComponent } from './views/home/region-detailed-dialog/region-detailed-dialog.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    RegionListComponent,
+    RegionDetailedDialogComponent
+  
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatTableModule,
+    MatButtonModule,
+    MatDialogModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

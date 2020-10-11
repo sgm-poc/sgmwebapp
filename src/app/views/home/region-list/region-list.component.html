@@ -1,0 +1,32 @@
+<mat-toolbar class="secondary-bg-color">
+    <mat-toolbar-row>
+      <span>Regiões</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div fxLayout="row wrap"  xLayoutAlign="start center" style="padding: 2%">
+    <ng-container *ngFor="let region of regionList">
+        <mat-card class="region-card"
+        fxFlex="0 1 calc(20% - 22px)"
+        fxFlex.lt-lg="0 1 calc(33% - 22px)"
+        fxFlex.lt-md="0 1 calc(50% - 22px)"
+        fxFlex.lt-sm="100%" >
+            <mat-card-header>
+                <mat-card-title>{{region.name}}</mat-card-title>
+                <mat-card-subtitle>{{region.code}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    <span>Nome: {{region.name}}</span>
+                </p>
+                <p>
+                    <span>Código: {{region.code}}</span>
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" (click)="openDialog([region.code])">Detalhes</button>
+            </mat-card-actions>
+        </mat-card>
+    </ng-container>
+</div>
