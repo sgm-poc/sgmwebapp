@@ -8,11 +8,12 @@ import {ResponseRegionList} from '../model/responseRegionList.model'
 })
 export class RegionListService {
 
-  apiUrl = 'http://spatial-data-processor-lb-1237091983.sa-east-1.elb.amazonaws.com/regions';
+  apiUrl = 'https://cors-anywhere.herokuapp.com/http://spatial-data-processor-lb-1237091983.sa-east-1.elb.amazonaws.com/regions';
 
   httpOpions = {
     headers: new HttpHeaders({
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'x-requested-with': ''
     })
   };
 
@@ -22,7 +23,7 @@ export class RegionListService {
   ) { }
 
   public getRegionList(): Observable<ResponseRegionList> {
-    return this.httpClient.get<ResponseRegionList>(this.apiUrl);
+    return this.httpClient.get<ResponseRegionList>(this.apiUrl, this.httpOpions);
     // return this.httpClient.get<ResponseRegionList>(this.apiUrl + '/' + regionCode )
 
   }
