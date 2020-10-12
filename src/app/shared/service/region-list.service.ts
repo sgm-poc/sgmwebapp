@@ -13,7 +13,6 @@ export class RegionListService {
   httpOpions = {
     headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'x-requested-with': ''
     })
   };
 

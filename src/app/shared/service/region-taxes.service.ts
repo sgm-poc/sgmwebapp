@@ -8,7 +8,7 @@ import { ResponseRegionTaxes } from '../model/responseRegionTaxes.model';
 })
 export class RegionTaxesService {
 
-  apiUrl = 'http://spatial-data-processor-lb-1237091983.sa-east-1.elb.amazonaws.com/regions/';
+  apiUrl = 'https://cors-anywhere.herokuapp.com/http://spatial-data-processor-lb-1237091983.sa-east-1.elb.amazonaws.com/regions/';
   taxesPath = '/taxes'
 
   httpOpions = {
