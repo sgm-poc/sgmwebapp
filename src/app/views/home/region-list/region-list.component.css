@@ -2,12 +2,8 @@
     padding: 2em; 
     margin: 10px;
     border: 1px solid #b69ad6; 
-    border-radius: 10px 5% / 20px 30px; 
+    border-radius: 10px; 
   }
-  
-.example-spacer {
-    flex: 1 1 auto;
-}
 
 .secondary-bg-color {
     background-color: #af8cff;

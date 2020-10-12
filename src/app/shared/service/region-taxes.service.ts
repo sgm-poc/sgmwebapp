@@ -8,7 +8,7 @@ import { ResponseRegionTaxes } from '../model/responseRegionTaxes.model';
 })
 export class RegionTaxesService {
 
-  apiUrl = 'http://localhost:8080/regions/';
+  apiUrl = 'http://spatial-data-processor-lb-1237091983.sa-east-1.elb.amazonaws.com/regions/';
   taxesPath = '/taxes'
 
   httpOpions = {
