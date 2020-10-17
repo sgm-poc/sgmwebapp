@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
 import { RegionDetailedDialogComponent } from './views/home/region-detailed-dialog/region-detailed-dialog.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { CountyDataDialogComponent } from './views/home/county-data-dialog/county-data-dialog.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     HomeComponent,
     HeaderComponent,
     RegionListComponent,
-    RegionDetailedDialogComponent
+    RegionDetailedDialogComponent,
+    CountyDataDialogComponent
   
   ],
   imports: [

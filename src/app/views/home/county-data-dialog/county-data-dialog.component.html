@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Dados do Município</h1>
+<div mat-dialog-content>
+  
+  <mat-card class="region-card">
+    <mat-card-header>
+        <mat-card-title>{{countyData.name}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            <span>Nome: {{countyData.name}}</span>
+        </p>
+        <p>
+            <span>População: {{countyData.population}}</span>
+        </p>
+        <p>
+            <span>Impostos: {{countyData.totalTaxes}}</span>
+        </p>        
+        <p>
+            <span>Regiões: {{countyData.totalRegions}}</span>
+        </p>
+    </mat-card-content>
+</mat-card>
+</div>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

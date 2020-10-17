@@ -5,6 +5,8 @@ import { ResponseRegion } from 'src/app/shared/model/responseRegion.model';
 import { MatDialog } from '@angular/material/dialog';
 import { RegionDetailedDialogComponent } from '../region-detailed-dialog/region-detailed-dialog.component';
 import { ResponseRegionTaxes } from 'src/app/shared/model/responseRegionTaxes.model';
+import { CountyDataDialogComponent } from '../county-data-dialog/county-data-dialog.component';
+import { CountyDataService } from 'src/app/shared/service/county-data.service';
 
 @Component({
   selector: 'app-region-list',
@@ -18,6 +20,7 @@ export class RegionListComponent implements OnInit {
   constructor(
     public regionListService: RegionListService,
     public regionTaxesService: RegionTaxesService,
+    public countyDataService: CountyDataService,
     public dialog: MatDialog
   ) { }
 
@@ -40,6 +43,14 @@ export class RegionListComponent implements OnInit {
 
     this.regionTaxesService.getRegionDetails(code).subscribe(data => {
       this.dialog.open(RegionDetailedDialogComponent, {
+        data: data
+      });
+    });
+  };
+
+  openGeneralDataDialog() {
+    this.countyDataService.getCountyData().subscribe(data => {
+      this.dialog.open(CountyDataDialogComponent, {
         data: data
       });
     });

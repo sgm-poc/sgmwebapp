@@ -9,6 +9,7 @@ import {ResponseRegionList} from '../model/responseRegionList.model'
 export class RegionListService {
 
   apiUrl = 'https://cors-anywhere.herokuapp.com/http://spatial-data-processor-lb-1237091983.sa-east-1.elb.amazonaws.com/regions';
+  // apiUrl = 'http://localhost:8080/regions';
 
   httpOpions = {
     headers: new HttpHeaders({

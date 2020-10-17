@@ -8,3 +8,11 @@
 .secondary-bg-color {
     background-color: #af8cff;
 }
+
+.center-button {
+  width: auto;  
+  display: block; 
+  text-align: center; 
+  margin: 1em; 
+  margin-top: 2em;
+}

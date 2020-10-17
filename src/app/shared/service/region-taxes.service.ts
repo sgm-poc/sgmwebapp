@@ -8,7 +8,9 @@ import { ResponseRegionTaxes } from '../model/responseRegionTaxes.model';
 })
 export class RegionTaxesService {
 
-  apiUrl = 'https://cors-anywhere.herokuapp.com/http://spatial-data-processor-lb-1237091983.sa-east-1.elb.amazonaws.com/regions/';
+  apiUrl = 'https://cors-anywhere.herokuapp.com/http://spatial-data-processor-lb-1237091983.sa-east-1.elb.amazonaws.com/regions';
+  // apiUrl = 'http://localhost:8080/regions';
+
   taxesPath = '/taxes'
 
   httpOpions = {
@@ -23,6 +25,6 @@ export class RegionTaxesService {
   ) { }
 
   getRegionDetails(code: String) :Observable<ResponseRegionTaxes> { 
-    return this.httpClient.get<ResponseRegionTaxes>(this.apiUrl + code + this.taxesPath);
+    return this.httpClient.get<ResponseRegionTaxes>(this.apiUrl + '/' + code + this.taxesPath);
   }
 }

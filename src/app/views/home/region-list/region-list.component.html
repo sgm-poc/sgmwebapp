@@ -4,7 +4,11 @@
     </mat-toolbar-row>
 </mat-toolbar>
 
-<div fxLayout="row wrap"  xLayoutAlign="start center" style="padding: 2%">
+<div class="center-button">
+    <button mat-raised-button color="primary" (click)="openGeneralDataDialog()">Obter dados gerais do município</button>
+</div>
+
+<div fxLayout="row wrap" xLayoutAlign="start center" style="padding: 2em; padding-top: 1em;">
     <ng-container *ngFor="let region of regionList">
         <mat-card class="region-card"
         fxFlex="0 1 calc(20% - 22px)"
